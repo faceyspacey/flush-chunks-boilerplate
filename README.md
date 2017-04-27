@@ -1,5 +1,7 @@
 # Flush Chunks Boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/faceyspacey/flush-chunks-boilerplate.svg)](https://greenkeeper.io/)
+
 This is the boilerplate example for [faceyspacey/webpack-flush-requires](https://github.com/faceyspacey/webpack-flush-requires).
 You should be familiar with its documentation before running.
 
