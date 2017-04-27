@@ -5,7 +5,7 @@ in conjunction with [react-loadable](https://github.com/thejameskyle/react-loada
 
 You should get familiar with the documentation of those while running this.
 
-***Note: This is a preemptive repo. For HMR to work for split components a pending PR to *React Loadable* will have to be accepted. That PR also contains a suggestion for the `flushRequires` API documented below. Currently in code the original flushing API is used. Don't sweat it.***
+***Note: This is a preemptive repo. For HMR to work for split components a pending [PR](https://github.com/thejameskyle/react-loadable/pull/37) to *React Loadable* will have to be accepted. That PR also contains a suggestion for the `flushRequires` API documented below. Currently in code the original flushing API is used. Don't sweat it.***
 
 
 ## Installation
