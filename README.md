@@ -11,8 +11,8 @@ You should get familiar with the documentation of those while running this.
 ## Installation
 
 ```
-git clone https://github.com/faceyspacey/flush-flush-boilerplate.git
-cd flush-requires-flush
+git clone https://github.com/faceyspacey/flush-chunks-boilerplate.git
+cd flush-chunks-boilerplate
 yarn install
 ```
 
