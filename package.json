@@ -15,6 +15,7 @@
     "build:server": "rimraf buildServer && webpack --progress -p --config webpack/server.prod.js",
     "build:both": "npm run build:client && npm run build:server",
     "clean": "rimraf buildClient buildServer",
+    "precommit": "lint-staged --verbose",
     "commit": "git-cz",
     "lint": "eslint --fix src server webpack",
     "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.js'"
