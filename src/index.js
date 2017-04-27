@@ -8,7 +8,7 @@ const render = App =>
     <AppContainer>
       <App />
     </AppContainer>,
-    document.getElementById('root'),
+    document.getElementById('root')
   )
 
 if (process.env.NODE_ENV === 'development') {
@@ -18,6 +18,4 @@ if (process.env.NODE_ENV === 'development') {
   })
 }
 
-// render(App)
-
-window.render = render.bind(null, App)
+render(App)

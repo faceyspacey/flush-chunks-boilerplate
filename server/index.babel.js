@@ -1,8 +1,8 @@
 import express from 'express'
 import webpack from 'webpack'
-import webpackDevMiddleware from 'webpack-dev-middleware'
+import webpackDevMiddleware from 'webpack-dev-middleware-multi-compiler'
 import webpackHotMiddleware from 'webpack-hot-middleware'
-import clientConfig from '../webpack/client.dev.js'
+import clientConfig from '../webpack/client.dev'
 import serverRender from './render'
 
 const DEV = process.env.NODE_ENV === 'development'
@@ -16,16 +16,16 @@ if (DEV) {
   app.use(webpackDevMiddleware(compiler, { publicPath }))
   app.use(webpackHotMiddleware(compiler))
   compiler.plugin('done', stats => {
-    app.use(serverRender(stats.toJson(), null, outputPath))
-  })  
-} else {
-  const stats = require('../buildClient/stats.json')
+    app.use(serverRender({ clientStats: stats.toJson(), outputPath }))
+  })
+}
+else {
+  const clientStats = require('../buildClient/stats.json')
 
   app.use(publicPath, express.static(outputPath))
-  app.use(serverRender(stats, null, outputPath))
+  app.use(serverRender({ clientStats, outputPath }))
 }
 
 app.listen(3000, () => {
   console.log('Listening @ http://localhost:3000/')
 })
-
